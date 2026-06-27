@@ -5,12 +5,12 @@
 //     sign_in_count: u64,
 // }
 
-struct User {
-    active: bool,
-    username: &str,
-    email: &str,
-    sign_in_count: u64,
-}
+// struct User {
+//     active: bool,
+//     username: &str,
+//     email: &str,
+//     sign_in_count: u64,
+// }
 
 struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
@@ -46,12 +46,12 @@ fn main() {
     //
     // let subject = AlwaysEqual;
 
-    let user1 = User {
-        active: true,
-        username: "someusername123",
-        email: "someone@example.com",
-        sign_in_count: 1,
-    };
+    // let user1 = User {
+    //     active: true,
+    //     username: "someusername123",
+    //     email: "someone@example.com",
+    //     sign_in_count: 1,
+    // };
 
 }
 
