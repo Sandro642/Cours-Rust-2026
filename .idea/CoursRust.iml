@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Struct/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/enums/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/matchs/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test1/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/functions/target" />
@@ -16,6 +17,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Struct/target" />
       <excludeFolder url="file://$MODULE_DIR$/enums/target" />
       <excludeFolder url="file://$MODULE_DIR$/matchs/target" />
+      <excludeFolder url="file://$MODULE_DIR$/test1/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
