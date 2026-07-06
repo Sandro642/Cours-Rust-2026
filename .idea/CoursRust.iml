@@ -10,6 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/enums/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/matchs/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/my-project/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/backyard/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/restaurant/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/functions/target" />
@@ -18,6 +21,9 @@
       <excludeFolder url="file://$MODULE_DIR$/enums/target" />
       <excludeFolder url="file://$MODULE_DIR$/matchs/target" />
       <excludeFolder url="file://$MODULE_DIR$/test1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/my-project/target" />
+      <excludeFolder url="file://$MODULE_DIR$/backyard/target" />
+      <excludeFolder url="file://$MODULE_DIR$/restaurant/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
