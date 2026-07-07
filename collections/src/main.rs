@@ -24,6 +24,37 @@ fn main() {
 
     //
 
+    // mod another {
+    //     fn chapter_4() {
+    //         let mut v = vec![1,2,3,4,5];
+    //         let first = &v[0];
+    //
+    //         v.push(6);
+    //
+    //         println!("The first element is {first}")
+    //     }
+    // }
 
+    let mut v = vec![100, 32, 57];
+
+    for i in &mut v {
+        *i += 50;
+    }
+
+    mod spreadsheet {
+        pub enum SpreadsheetCell {
+            Int(i32),
+            Float(f64),
+            Text(String),
+        }
+
+        fn row_fn() {
+            let row = vec![
+                SpreadsheetCell::Int(3),
+                SpreadsheetCell::Text(String::from("Blue")),
+                SpreadsheetCell::Float(10.12),
+            ];
+        }
+    }
 
 }
