@@ -1,3 +1,5 @@
+use crate::hash_map::{launch};
+
 fn main() {
     let mut v: Vec<i32> = Vec::new();
 
@@ -120,5 +122,87 @@ fn main() {
 
     for c in hello.bytes() {
         println!("{c}");
+    }
+
+    launch();
+}
+
+pub mod hash_map {
+    use std::collections::HashMap;
+
+    pub fn launch() {
+        teams();
+        teams_alternate();
+        another_test();
+        update_map();
+        or_insert();
+        update_old_value();
+    }
+
+    fn teams() {
+        let mut scores = HashMap::new();
+
+        scores.insert(String::from("Blue"), Option::Some(10));
+        scores.insert(String::from("Yellow"), Option::Some(50));
+
+        let team_name = String::from("Blue");
+        let score = scores.get(&team_name).copied().unwrap_or(Option::Some(0));
+    }
+
+    fn teams_alternate() {
+        let mut scores = HashMap::new();
+
+        scores.insert(String::from("Blue"), 10);
+        scores.insert(String::from("Yellow"), 50);
+
+        for (key, value) in &scores {
+            println!("{key}: {value}");
+        }
+    }
+
+    fn another_test() {
+        let field_name = String::from("Favorite color");
+        let field_value = String::from("Blue");
+
+        let mut map: HashMap<String, String> = HashMap::new(); // On peut laisser le compilateur négocier lui même le contenu de la HashMap
+        let mut map = HashMap::new();
+
+        map.insert(field_name, field_value);
+
+        for (key, value) in &map {
+            println!("{key}: {value}");
+        }
+    }
+
+    fn update_map() {
+        let mut scores = HashMap::new();
+
+        scores.insert(String::from("Blue"), 10);
+        scores.insert(String::from("Blue"), 25);
+
+        println!("{scores:?}");
+    }
+
+    fn or_insert() {
+        let mut scores = HashMap::new();
+        scores.insert(String::from("Blue"), 10);
+
+        scores.entry(String::from("Yellow")).or_insert(50);
+        scores.entry(String::from("Blue")).or_insert(50);
+
+        println!("{scores:?}");
+    }
+
+    fn update_old_value() {
+        let text = "Hello world wonderful world";
+
+        let mut map = HashMap::new();
+
+        for word in text.split_whitespace() {
+            let count = map.entry(word).or_insert(0);
+            *count += 1;
+        }
+
+        println!("{map:?}");
     }
 }
