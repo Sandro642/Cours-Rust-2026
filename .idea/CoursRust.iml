@@ -16,6 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/collections/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/error_handling/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dynamic_error/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/generic_types/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/functions/target" />
@@ -30,6 +31,7 @@
       <excludeFolder url="file://$MODULE_DIR$/collections/target" />
       <excludeFolder url="file://$MODULE_DIR$/error_handling/target" />
       <excludeFolder url="file://$MODULE_DIR$/dynamic_error/target" />
+      <excludeFolder url="file://$MODULE_DIR$/generic_types/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
