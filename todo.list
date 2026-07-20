@@ -19,3 +19,5 @@ https://doc.rust-lang.org/stable/book/ch08-03-hash-maps.html
 https://jimskapt.github.io/rust-book-fr/ch09-00-error-handling.html
 
 https://jimskapt.github.io/rust-book-fr/ch09-02-recoverable-errors-with-result.html#raccourcis-pour-faire-un-panic-lors-dune-erreur--unwrap-et-expect
+
+https://jimskapt.github.io/rust-book-fr/ch10-00-generics.html
