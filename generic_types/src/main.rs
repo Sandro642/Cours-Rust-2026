@@ -70,10 +70,10 @@ pub mod higher_algo {
         le_plus_grand
     }
 
-    fn le_plus_grand<T: PartialOrd + Copy>(list: &[T]) -> T {
-        let mut le_plus_grand = list[0];
+    fn le_plus_grand<T: PartialOrd>(list: &[T]) -> &T {
+        let mut le_plus_grand = &list[0];
 
-        for &element in list {
+        for element in list {
             if element > le_plus_grand {
                 le_plus_grand = element;
             }
@@ -84,14 +84,14 @@ pub mod higher_algo {
 
     pub fn use_mod() {
         let number_list_1 = vec![34,50,25,100,65];
-
-        let result = le_plus_grand(&number_list_1);
-        println!("Le nombre le plus grand est {}", result);
-
-        let number_list_2 = vec![102,34,6000,89,54,2,43,8];
-
-        let result = le_plus_grand(&number_list_2);
-        println!("Le nombre le plus grand est {}", result);
+        //
+        // let result = le_plus_grand(&number_list_1);
+        // println!("Le nombre le plus grand est {}", result);
+        //
+        // let number_list_2 = vec![102,34,6000,89,54,2,43,8];
+        //
+        // let result = le_plus_grand(&number_list_2);
+        // println!("Le nombre le plus grand est {}", result);
 
         //
 
