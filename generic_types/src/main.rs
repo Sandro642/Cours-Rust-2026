@@ -33,77 +33,77 @@ fn main() {
     use_ugly_impl();
 }
 
-// pub mod higher_algo {
-//     // fn le_plus_grand(list: &[i32]) -> i32 {
-//     //     let mut the_higher = list[0];
-//     //
-//     //     for &element in list {
-//     //         if element > the_higher {
-//     //             the_higher = element;
-//     //         }
-//     //     }
-//     //
-//     //     the_higher
-//     // }
-//
-//     fn le_plus_grand_i32(list: &[i32]) -> i32 {
-//         let mut le_plus_grand = list[0];
-//
-//         for &element in list.iter() {
-//             if element > le_plus_grand {
-//                 le_plus_grand = element;
-//             }
-//         }
-//
-//         le_plus_grand
-//     }
-//
-//     fn le_plus_grand_caractere(list: &[char]) -> char {
-//         let mut le_plus_grand = list[0];
-//
-//         for &element in list.iter() {
-//             if element > le_plus_grand {
-//                 le_plus_grand = element;
-//             }
-//         }
-//
-//         le_plus_grand
-//     }
-//
-//     fn le_plus_grand<T>(list: &[T]) -> T {
-//         let mut le_plus_grand = list[0];
-//
-//         for &element in list {
-//             if element > le_plus_grand {
-//                 le_plus_grand = element;
-//             }
-//         }
-//
-//         le_plus_grand
-//     }
-//
-//     pub fn use_mod() {
-//         let number_list_1 = vec![34,50,25,100,65];
-//
-//         let result = le_plus_grand(&number_list_1);
-//         println!("Le nombre le plus grand est {}", result);
-//
-//         let number_list_2 = vec![102,34,6000,89,54,2,43,8];
-//
-//         let result = le_plus_grand(&number_list_2);
-//         println!("Le nombre le plus grand est {}", result);
-//
-//         //
-//
-//         let result = le_plus_grand(&number_list_1);
-//         println!("Le plus grand nombre est {}", result);
-//
-//         let char_list_1 = vec!['y', 'm', 'a', 'q'];
-//
-//         let result = le_plus_grand(&char_list_1);
-//         println!("Le plus grand caractère est {}", result);
-//     }
-// }
+pub mod higher_algo {
+    // fn le_plus_grand(list: &[i32]) -> i32 {
+    //     let mut the_higher = list[0];
+    //
+    //     for &element in list {
+    //         if element > the_higher {
+    //             the_higher = element;
+    //         }
+    //     }
+    //
+    //     the_higher
+    // }
+
+    fn le_plus_grand_i32(list: &[i32]) -> i32 {
+        let mut le_plus_grand = list[0];
+
+        for &element in list.iter() {
+            if element > le_plus_grand {
+                le_plus_grand = element;
+            }
+        }
+
+        le_plus_grand
+    }
+
+    fn le_plus_grand_caractere(list: &[char]) -> char {
+        let mut le_plus_grand = list[0];
+
+        for &element in list.iter() {
+            if element > le_plus_grand {
+                le_plus_grand = element;
+            }
+        }
+
+        le_plus_grand
+    }
+
+    fn le_plus_grand<T: PartialOrd + Copy>(list: &[T]) -> T {
+        let mut le_plus_grand = list[0];
+
+        for &element in list {
+            if element > le_plus_grand {
+                le_plus_grand = element;
+            }
+        }
+
+        le_plus_grand
+    }
+
+    pub fn use_mod() {
+        let number_list_1 = vec![34,50,25,100,65];
+
+        let result = le_plus_grand(&number_list_1);
+        println!("Le nombre le plus grand est {}", result);
+
+        let number_list_2 = vec![102,34,6000,89,54,2,43,8];
+
+        let result = le_plus_grand(&number_list_2);
+        println!("Le nombre le plus grand est {}", result);
+
+        //
+
+        let result = le_plus_grand(&number_list_1);
+        println!("Le plus grand nombre est {}", result);
+
+        let char_list_1 = vec!['y', 'm', 'a', 'q'];
+
+        let result = le_plus_grand(&char_list_1);
+        println!("Le plus grand caractère est {}", result);
+    }
+}
 
 pub mod type_parameter {
     struct Point<T> {
@@ -161,8 +161,8 @@ pub mod complex_type {
     }
 
     pub fn use_ugly_impl() {
-        let p1 = Point {x:5, y:10.4};
-        let p2 = Point {x: "Hello", y: 'c'};
+        let p1 = Point { x: 5, y: 10.4 };
+        let p2 = Point { x: "Hello", y: 'c' };
 
         let p3 = p1.melange(p2);
 
