@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 pub trait Resumable {
     fn resumer(&self) -> String {
         format!("(Lire plus d'éléments de {} ...)", self.resumer_auteur())
@@ -40,3 +42,34 @@ impl Resumable for Tweet {
         format!("@{}", self.username)
     }
 }
+
+struct Paire<T> {
+    x: T,
+    y: T,
+}
+
+impl<T> Paire<T> {
+    fn new(x: T, y: T) -> Self {
+        Self {x, y}
+    }
+}
+
+impl<T: Display + PartialOrd> Paire<T> {
+    fn afficher_comparaison(&self) {
+        if self.x >= self.y {
+            println!("Le plus grand élément est x = {}", self.x);
+        } else {
+            println!("Le plus grand élément est y = {}", self.y);
+        }
+    }
+}
+
+fn test() {
+    let s = 3.to_string();
+}
+
+// Example //
+
+// impl<T: Display> ToString for T {
+//
+// }
