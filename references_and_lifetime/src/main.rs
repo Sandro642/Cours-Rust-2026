@@ -47,7 +47,7 @@ fn main() {
         }
     }
 
-    let roman = String::from("Appelez-moi Ismaël. Il y a quelques années...");
+    let roman = String::from("Appellez-moi Ismaël. Il y a quelques années...");
     let premiere_phrase = roman.split('.')
         .next()
         .unwrap();
