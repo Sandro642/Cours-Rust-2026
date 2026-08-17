@@ -4,8 +4,7 @@ use std::fs;
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    let config = interpreter_config(&args);
-
+    let config = Config::new(&args);
     println!("On recherche : {}", config.recherche);
     println!("Dans le fichier : {}", config.nom_fichier);
 
@@ -20,12 +19,18 @@ struct Config {
     nom_fichier: String,
 }
 
-fn interpreter_config(args: &[String]) -> Config {
-    let recherche = args[1].clone();
-    let nom_fichier = args[2].clone();
+impl Config {
+    fn new(args: &[String]) -> Config {
+        if args.len() < 3 {
+            panic!("Il n'y a pas assez d'arguments.");
+        }
 
-    Config {
-        recherche,
-        nom_fichier,
+        let recherche = args[1].clone();
+        let nom_fichier = args[2].clone();
+
+        Config {
+            recherche,
+            nom_fichier,
+        }
     }
 }
