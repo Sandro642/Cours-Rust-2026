@@ -1,5 +1,5 @@
+use minigrep::Config;
 use std::env;
-use std::fs;
 use std::process;
 
 fn main() {
@@ -16,29 +16,9 @@ fn main() {
     println!("On recherche : {}", config.recherche);
     println!("Dans le fichier : {}", config.nom_fichier);
 
-    let contenu = fs::read_to_string(config.nom_fichier)
-        .expect("Quelque chose s'est mal passé lors de la lecture du fichier");
+    if let Err(e) = minigrep::run(config) {
+        println!("Erreur applicative {}", e);
 
-    println!("Dans le texte :\n{}", contenu);
-}
-
-struct Config {
-    recherche: String,
-    nom_fichier: String,
-}
-
-impl Config {
-    fn new(args: &[String]) -> Result<Config, &'static str> {
-        if args.len() < 3 {
-            return Err("Il n'y a pas assez d'arguments.");
-        }
-
-        let recherche = args[1].clone();
-        let nom_fichier = args[2].clone();
-
-        Ok(Config {
-            recherche,
-            nom_fichier,
-        })
+        process::exit(1);
     }
 }
