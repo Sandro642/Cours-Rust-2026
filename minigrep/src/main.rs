@@ -1,10 +1,18 @@
 use std::env;
 use std::fs;
+use std::process;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    let config = Config::new(&args);
+    let config = Config::new(&args).unwrap_or_else(|err| {
+        println!(
+            "Problème rencontrée lors de l'interprétation des arguments : {}",
+            err
+        );
+        process::exit(1);
+    });
+
     println!("On recherche : {}", config.recherche);
     println!("Dans le fichier : {}", config.nom_fichier);
 
@@ -20,17 +28,17 @@ struct Config {
 }
 
 impl Config {
-    fn new(args: &[String]) -> Config {
+    fn new(args: &[String]) -> Result<Config, &'static str> {
         if args.len() < 3 {
-            panic!("Il n'y a pas assez d'arguments.");
+            return Err("Il n'y a pas assez d'arguments.");
         }
 
         let recherche = args[1].clone();
         let nom_fichier = args[2].clone();
 
-        Config {
+        Ok(Config {
             recherche,
             nom_fichier,
-        }
+        })
     }
 }
