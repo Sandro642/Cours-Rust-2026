@@ -28,3 +28,33 @@ impl Config {
         })
     }
 }
+
+pub fn rechercher<'a>(recherche: &str, contenu: &'a str) -> Vec<&'a str> {
+    let mut resultats = Vec::new();
+
+    for ligne in contenu.lines() {
+        if ligne.contains(recherche) {
+            resultats.push(ligne);
+        }
+    }
+    resultats
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn un_resultat() {
+        let recherche = "duct";
+        let contenu = "\
+Rust:
+sécurité, rapidité, productivité.
+Obtenez les trois en même temps.";
+
+        assert_eq!(
+            vec!["sécurité, rapidité, productivité."],
+            rechercher(recherche, contenu)
+        );
+    }
+}
