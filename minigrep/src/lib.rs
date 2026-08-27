@@ -3,7 +3,9 @@ use std::{error::Error, fs};
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contenu = fs::read_to_string(config.nom_fichier)?;
 
-    println!("Dans le texte: \n{}", contenu);
+    for ligne in rechercher(&config.recherche, &contenu) {
+        println!("{}", ligne);
+    }
 
     Ok(())
 }
