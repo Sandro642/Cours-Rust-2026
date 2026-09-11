@@ -6,7 +6,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     let config = Config::new(&args).unwrap_or_else(|err| {
-        println!(
+        eprintln!(
             "Problème rencontrée lors de l'interprétation des arguments : {}",
             err
         );
@@ -17,7 +17,7 @@ fn main() {
     println!("Dans le fichier : {}", config.nom_fichier);
 
     if let Err(e) = minigrep::run(config) {
-        println!("Erreur applicative {}", e);
+        eprintln!("Erreur applicative {}", e);
 
         process::exit(1);
     }
