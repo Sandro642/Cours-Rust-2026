@@ -21,6 +21,8 @@
       <sourceFolder url="file://$MODULE_DIR$/references_and_lifetime/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/traits/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/addition/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Leetcode/L14/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iterator_closures/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/functions/target" />
@@ -40,6 +42,8 @@
       <excludeFolder url="file://$MODULE_DIR$/references_and_lifetime/target" />
       <excludeFolder url="file://$MODULE_DIR$/traits/target" />
       <excludeFolder url="file://$MODULE_DIR$/addition/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Leetcode/L14/target" />
+      <excludeFolder url="file://$MODULE_DIR$/iterator_closures/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
