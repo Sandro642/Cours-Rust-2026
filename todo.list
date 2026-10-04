@@ -41,3 +41,5 @@ file:///Users/sandraw/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/ru
 ead again 13.1 ans then 13.2
 
 Arrêté à la page 13.1 Encart 13-10 : la logique de Cache. Continuer ici en faisant CTRL + F
+
+Arrêté à la page 13.2 Encart 13-15 : appel de la méthode next sur un itérateur
