@@ -3,9 +3,7 @@ use std::env;
 use std::process;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-
-    let config = Config::new(&args).unwrap_or_else(|err| {
+    let config = Config::new(env::args()).unwrap_or_else(|err| {
         eprintln!(
             "Problème rencontrée lors de l'interprétation des arguments : {}",
             err
