@@ -2,5 +2,6 @@
 name = "ma_crate"
 version = "0.1.0"
 edition = "2024"
+license = "AGPLV3"
 
 [dependencies]

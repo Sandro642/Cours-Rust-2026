@@ -26,3 +26,29 @@ mod tests {
 pub fn ajouter_un(x: i32) -> i32 {
     x + 1
 }
+
+pub use self::types::CouleurPrimaire;
+pub use self::types::CouleurSecondaire;
+pub use self::utilitaires::mixer;
+
+pub mod types {
+    pub enum CouleurPrimaire {
+        Rouge,
+        Jaune,
+        Bleu,
+    }
+
+    pub enum CouleurSecondaire {
+        Orange,
+        Vert,
+        Violet,
+    }
+}
+
+pub mod utilitaires {
+    use crate::types::{CouleurSecondaire::Orange, *};
+
+    pub fn mixer(c1: CouleurPrimaire, c2: CouleurPrimaire) -> CouleurSecondaire {
+        return Orange;
+    }
+}
