@@ -1,0 +1,9 @@
+[package]
+name = "additioneur"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ajouter_un = { path = "../ajouter_un/" }
+ajouter_deux = { path = "../ajouter_deux/" }
+rand = "0.8.8"
