@@ -13,12 +13,6 @@ mod tests {
     }
 }
 
-
-//! # Ma ma_crate
-//!
-//! 'ma_crate' est un regroupement d'utilitaires pour rendre plus pratique
-//! certains calculs.
-
 /// Ajoute 1 au nombre donné.
 ///
 /// #Exemples
@@ -32,4 +26,3 @@ mod tests {
 pub fn ajouter_un(x: i32) -> i32 {
     x + 1
 }
-
