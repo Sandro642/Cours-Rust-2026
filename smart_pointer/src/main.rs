@@ -1,6 +1,5 @@
-use std::ops::Deref;
-
 use crate::List::{Cons, Nil};
+use std::ops::Deref;
 
 fn main() {
     println!("Hello, world!");
@@ -18,6 +17,19 @@ fn main() {
     let m = MaBoite::new(String::from("Rust"));
     saluer(&m);
     saluer(&(*m)[..]);
+
+    let c = PointeurPerso {
+        donnee: String::from("des trucs"),
+    };
+
+    let d = PointeurPerso {
+        donnee: String::from("d'autres trucs"),
+    };
+
+    println!("PointeurPersos créés.");
+
+    drop(c);
+    println!("PointeurPerso libéré avant la fin du main.");
 }
 
 enum List {
@@ -30,6 +42,19 @@ enum Message {
     Deplacer { x: i32, y: i32 },
     Ecrire(String),
     ChangerCouleur(i32, i32, i32),
+}
+
+struct PointeurPerso {
+    donnee: String,
+}
+
+impl Drop for PointeurPerso {
+    fn drop(&mut self) {
+        println!(
+            "Nettoyage d'un PointeurPerso avec la donnée '{}'",
+            self.donnee
+        );
+    }
 }
 
 struct MaBoite<T>(T);
