@@ -24,6 +24,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Leetcode/L14/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/iterator_closures/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/minigrep/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/intern_mutability/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/functions/target" />
@@ -46,6 +47,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Leetcode/L14/target" />
       <excludeFolder url="file://$MODULE_DIR$/iterator_closures/target" />
       <excludeFolder url="file://$MODULE_DIR$/minigrep/target" />
+      <excludeFolder url="file://$MODULE_DIR$/intern_mutability/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
