@@ -3,20 +3,20 @@ use std::env;
 use std::process;
 
 fn main() {
-    let config = Config::new(env::args()).unwrap_or_else(|err| {
-        eprintln!(
-            "Problème rencontrée lors de l'interprétation des arguments : {}",
-            err
-        );
-        process::exit(1);
-    });
-
-    println!("On recherche : {}", config.recherche);
-    println!("Dans le fichier : {}", config.nom_fichier);
-
-    if let Err(e) = minigrep::run(config) {
-        eprintln!("Erreur applicative {}", e);
-
-        process::exit(1);
-    }
+    // let config = Config::new(env::args()).unwrap_or_else(|err| {
+    //     eprintln!(
+    //         "Problème rencontrée lors de l'interprétation des arguments : {}",
+    //         err
+    //     );
+    //     process::exit(1);
+    // });
+    //
+    // println!("On recherche : {}", config.recherche);
+    // println!("Dans le fichier : {}", config.nom_fichier);
+    //
+    // if let Err(e) = minigrep::run(config) {
+    //     eprintln!("Erreur applicative {}", e);
+    //
+    //     process::exit(1);
+    // }
 }
