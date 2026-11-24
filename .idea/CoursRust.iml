@@ -31,6 +31,7 @@
       <sourceFolder url="file://$MODULE_DIR$/gui/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/patron/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/poo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/motifs/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/functions/target" />
@@ -60,6 +61,7 @@
       <excludeFolder url="file://$MODULE_DIR$/gui/target" />
       <excludeFolder url="file://$MODULE_DIR$/patron/target" />
       <excludeFolder url="file://$MODULE_DIR$/poo/target" />
+      <excludeFolder url="file://$MODULE_DIR$/motifs/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
