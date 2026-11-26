@@ -129,6 +129,10 @@ fn main() {
             r, g, b
         )
     }
+
+    let ((pieds, pouces), Point {x, y}) = ((3, 10), Point {x: 3, y: -10});
+
+    
 }
 fn afficher_coordonnees(&(x,y): &(i32, i32)) {
     println!("Coordonnées actuelles: ({}, {})", x, y);
